@@ -1,33 +1,44 @@
 <?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
 <android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.example.bantumakers.kiandamuzik.TelaArtistaDetalhada">
+    tools:context="com.example.elisacapololo.kiandamuzik.TelaArtistaDetalhada">
 
     <ImageView
-        android:id="@+id/imageView2"
+        android:id="@+id/capaArtista"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:adjustViewBounds="true"
         android:scaleType="fitCenter"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/header" />
+        app:srcCompat="@drawable/header"
+        tools:layout_editor_absoluteX="0dp"
+        tools:layout_editor_absoluteY="0dp" />
 
     <android.support.design.widget.FloatingActionButton
-        android:id="@+id/floatingActionButton"
+        android:id="@+id/floatingActionButton2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginEnd="32dp"
+        android:layout_marginTop="8dp"
         android:clickable="true"
-        app:layout_constraintBottom_toBottomOf="@+id/imageView2"
+        app:layout_constraintBottom_toBottomOf="@+id/capaArtista"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView2"
-        app:srcCompat="@drawable/ic_play_circle_outline_black_24dp" />
+        app:layout_constraintTop_toBottomOf="@+id/capaArtista"
+        app:srcCompat="@drawable/ic_play_arrow_black_24dp" />
+
+    <android.support.constraint.Guideline
+        android:id="@+id/guiaDireita"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_end="16dp" />
 
     <android.support.constraint.Guideline
         android:id="@+id/guiaEsquerda"
@@ -36,34 +47,28 @@
         android:orientation="vertical"
         app:layout_constraintGuide_begin="16dp" />
 
-    <android.support.constraint.Guideline
-        android:id="@+id/guiaDireta"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="vertical"
-        app:layout_constraintGuide_begin="367dp" />
-
     <TextView
         android:id="@+id/nomeDoArtista"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="122dp"
+        android:layout_height="25dp"
         android:layout_marginTop="24dp"
         android:fontFamily="@font/montserrat_bold"
         android:text="@string/nomeArtista"
         android:textColor="@color/colorPrimaryDark"
-        android:textSize="18sp"
-        app:layout_constraintStart_toEndOf="@+id/guiaEsquerda"
-        app:layout_constraintTop_toBottomOf="@+id/imageView2" />
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="@+id/guiaEsquerda"
+        app:layout_constraintTop_toBottomOf="@+id/capaArtista" />
 
     <TextView
-        android:id="@+id/crescricaoDoArtista"
-        android:layout_width="0dp"
+        android:id="@+id/descrisaoArtista"
+        android:layout_width="363dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
         android:fontFamily="@font/montserrat"
-        android:text="Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis. "
-        android:textColor="@color/colorPrimaryDark"
-        app:layout_constraintEnd_toStartOf="@+id/guiaDireta"
+        android:text="@string/descrisaoArtista"
+        app:layout_constraintEnd_toStartOf="@+id/guiaDireita"
         app:layout_constraintStart_toStartOf="@+id/guiaEsquerda"
         app:layout_constraintTop_toBottomOf="@+id/nomeDoArtista" />
 
@@ -71,23 +76,22 @@
         android:id="@+id/topMusicas"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:layout_marginStart="40dp"
         android:layout_marginTop="24dp"
-        android:fontFamily="@font/montserrat"
-        android:text="Top Musicas"
-        android:textColor="@color/colorPrimaryDark"
-        app:layout_constraintBottom_toTopOf="@+id/listaDeMusicas"
+        android:text="@string/topMusica"
+        app:layout_constraintBottom_toTopOf="@+id/listaDeMusicaPopular"
         app:layout_constraintStart_toStartOf="@+id/guiaEsquerda"
-        app:layout_constraintTop_toBottomOf="@+id/crescricaoDoArtista" />
+        app:layout_constraintTop_toBottomOf="@+id/descrisaoArtista"
+        app:layout_constraintVertical_bias="0.0" />
 
     <android.support.v7.widget.RecyclerView
         android:id="@+id/listaDeMusicas"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/topMusicas" />
+        android:layout_width="369dp"
+        android:layout_height="84dp"
+        android:layout_marginTop="16dp"
+        app:layout_constraintTop_toBottomOf="@+id/topMusicas"
+        tools:layout_editor_absoluteX="20dp" />
+
 </android.support.constraint.ConstraintLayout>
+</ScrollView>

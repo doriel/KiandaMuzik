@@ -1,7 +1,7 @@
 package models;
 
 /**
- * Created by Bantu Makers on 08/12/2017.
+ * Created by Elisa Capololo on 08-12-2017.
  */
 
 public class Artista {
@@ -11,7 +11,6 @@ public class Artista {
     private String musicStyle;
     private int artistCoverImage;
     private boolean verified;
-
 
     public Artista(int id, String name, String description, String musicStyle, int artistCoverImage, boolean verified) {
         this.id = id;
@@ -69,7 +68,4 @@ public class Artista {
     public void setVerified(boolean verified) {
         this.verified = verified;
     }
-
-
 }
-

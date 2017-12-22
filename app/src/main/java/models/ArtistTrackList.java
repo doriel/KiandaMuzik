@@ -3,19 +3,18 @@ package models;
 import java.util.ArrayList;
 
 /**
- * Created by Bantu Makers on 08/12/2017.
+ * Created by Elisa Capololo on 08-12-2017.
  */
 
 public class ArtistTrackList {
     private int trackListId;
     private int artistId;
-    private ArrayList<Track> artistTrack;
+    private ArrayList<Track> artistTracks;
 
-
-    public ArtistTrackList(int trackListId, int artistId, ArrayList<Track> artistTrack) {
+    public ArtistTrackList(int trackListId, int artistId, ArrayList<Track> artistTracks) {
         this.trackListId = trackListId;
         this.artistId = artistId;
-        this.artistTrack = artistTrack;
+        this.artistTracks = artistTracks;
     }
 
     public int getTrackListId() {
@@ -34,11 +33,11 @@ public class ArtistTrackList {
         this.artistId = artistId;
     }
 
-    public ArrayList<Track> getArtistTrack() {
-        return artistTrack;
+    public ArrayList<Track> getArtistTracks() {
+        return artistTracks;
     }
 
-    public void setArtistTrack(ArrayList<Track> artistTrack) {
-        this.artistTrack = artistTrack;
+    public void setArtistTrack(ArrayList<Track> artistTracks) {
+        this.artistTracks = artistTracks;
     }
 }

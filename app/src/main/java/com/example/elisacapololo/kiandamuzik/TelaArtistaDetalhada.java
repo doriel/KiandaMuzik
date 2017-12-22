@@ -1,7 +1,9 @@
-package com.example.bantumakers.kiandamuzik;
+package com.example.elisacapololo.kiandamuzik;
 
-import android.support.v7.app.AppCompatActivity;
+
 import android.os.Bundle;
+import android.support.annotation.Nullable;
+import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 
@@ -15,16 +17,17 @@ import models.Track;
 
 public class TelaArtistaDetalhada extends AppCompatActivity {
 
-    RecyclerView listaRecyclerView;
+    RecyclerView listaDeMusicas;
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
+    protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        listaRecyclerView = findViewById(R.id.listaDeMusicas);
-        setTitle("Forca Suprema");
-        Artista fs = new Artista(1, "Força Suprema",  "description",  "HipHop", R.drawable.header,  true);
+        listaDeMusicas = findViewById(R.id.listaDeMusicas);
+        setTitle("Força Suprema");
+        Artista fs = new Artista( 1, "Força Suprema", "descripton",
+                                  "HipHop",  R.drawable.header,  true );
         Track urna = new Track();
-        Album caveira = new Album( 1, "Caveira", fs.getId(),  "2017",  "500,00 kz");
+        Album caveira = new Album( 1, "Caveira", fs.getId(),  "2017", "500,00kz");
         urna.setAlbum(caveira);
         urna.setArtist(fs);
         urna.setTrackCover(R.drawable.fs);
@@ -35,8 +38,8 @@ public class TelaArtistaDetalhada extends AppCompatActivity {
         tracks.add(urna);
         ArtistTrackList fsTrackList = new ArtistTrackList(1, fs.getId(), tracks);
         LinearLayoutManager linearLayoutManager = new LinearLayoutManager(this);
-        listaRecyclerView.setLayoutManager(linearLayoutManager);
+        listaDeMusicas.setLayoutManager(linearLayoutManager);
         ArtistTrackAdapter adapter = new ArtistTrackAdapter(this, fsTrackList);
-        listaRecyclerView.setAdapter(adapter);
+        listaDeMusicas.setAdapter(adapter);
     }
 }

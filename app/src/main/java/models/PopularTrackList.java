@@ -3,41 +3,43 @@ package models;
 import java.util.ArrayList;
 
 /**
- * Created by Bantu Makers on 18/12/2017.
+ * Created by Elisa Capololo on 18-12-2017.
  */
 
 public class PopularTrackList {
-    private int popularTrackListId;
-    private int popularArtistId;
-    private ArrayList<Track> popularArtistTrack;
 
-    public PopularTrackList(int popularTrackListId, int popularArtistId, ArrayList<Track> popularArtistTrack) {
-        this.popularTrackListId = popularTrackListId;
-        this.popularArtistId = popularArtistId;
-        this.popularArtistTrack = popularArtistTrack;
+    private int ptrackListId;
+    private int artistpopularId;
+    private ArrayList<Track> popularTracks;
+
+    public PopularTrackList(int ptrackListId, int artistpopularId, ArrayList<Track> popularTracks) {
+        this.ptrackListId = ptrackListId;
+        this.artistpopularId = artistpopularId;
+        this.popularTracks = popularTracks;
     }
 
-    public int getPopularTrackListId() {
-        return popularTrackListId;
+    public int getPtrackListId() {
+        return ptrackListId;
     }
 
-    public void setPopularTrackListId(int popularTrackListId) {
-        this.popularTrackListId = popularTrackListId;
+    public void setPtrackListId(int ptrackListId) {
+        this.ptrackListId = ptrackListId;
     }
 
-    public int getPopularArtistId() {
-        return popularArtistId;
+    public int getArtistpopularId() {
+        return artistpopularId;
     }
 
-    public void setPopularArtistId(int popularArtistId) {
-        this.popularArtistId = popularArtistId;
+    public void setArtistpopularId(int artistpopularId) {
+        this.artistpopularId = artistpopularId;
     }
 
-    public ArrayList<Track> getPopularArtistTrack() {
-        return popularArtistTrack;
+    public ArrayList<Track> getPopularTracks() {
+        return popularTracks;
     }
 
-    public void setPopularArtistTrack(ArrayList<Track> popularArtistTrack) {
-        this.popularArtistTrack = popularArtistTrack;
+    public void setPopularTracks(ArrayList<Track> popularTracks) {
+        this.popularTracks = popularTracks;
     }
 }
+

@@ -1,24 +1,23 @@
 package models;
 
 /**
- * Created by Bantu Makers on 08/12/2017.
+ * Created by Elisa Capololo on 08-12-2017.
  */
 
 public class Track {
     private int id;
-    private String name;
     private String aPath;
-    private String aName;
+    private  String aName;
     private Album album;
     private Artista artist;
-    private int trackCover;
+    private  int trackCover;
 
-    public Track() {
+    public  Track(){
+
     }
 
-    public Track(int id, String name, String aPath, String aName, Album album, Artista artist, int trackCover) {
+    public Track(int id, String aPath, String aName, Album album, Artista artist, int trackCover) {
         this.id = id;
-        this.name = name;
         this.aPath = aPath;
         this.aName = aName;
         this.album = album;
@@ -32,14 +31,6 @@ public class Track {
 
     public void setId(int id) {
         this.id = id;
-    }
-
-    public String getName() {
-        return name;
-    }
-
-    public void setName(String name) {
-        this.name = name;
     }
 
     public String getaPath() {

@@ -3,7 +3,9 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/KiandaMuzik.iml" filepath="$PROJECT_DIR$/KiandaMuzik.iml" />
+      <module fileurl="file://C:\Users\Bantu Makers\Desktop\KiandaMuzik\KiandaMuzik.iml" filepath="C:\Users\Bantu Makers\Desktop\KiandaMuzik\KiandaMuzik.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
+      <module fileurl="file://C:\Users\Bantu Makers\Desktop\KiandaMuzik\app\app.iml" filepath="C:\Users\Bantu Makers\Desktop\KiandaMuzik\app\app.iml" />
     </modules>
   </component>
 </project>
